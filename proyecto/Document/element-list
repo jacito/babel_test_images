@@ -1,0 +1,8 @@
+com.mx.babel.employee
+com.mx.babel.employee.controller
+com.mx.babel.employee.db.model
+com.mx.babel.employee.db.model.enums
+com.mx.babel.employee.db.repository
+com.mx.babel.employee.exception
+com.mx.babel.employee.service
+com.mx.babel.employee.vo
