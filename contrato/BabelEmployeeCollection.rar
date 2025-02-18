@@ -1,0 +1,682 @@
+{
+	"info": {
+		"_postman_id": "dc944b8a-a854-4210-a0e5-6d4d6ce2b635",
+		"name": "BabelEmployee",
+		"description": "```\nRESTful API endpoints related to Employee operations\n\n ```",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22553284"
+	},
+	"item": [
+		{
+			"name": "getActiveEmployees",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"active"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200:OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"active"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"id\": 6,\r\n        \"firstName\": \"Jane\",\r\n        \"lastName\": \"Doe\",\r\n        \"secondLastName\": \"Johnson\",\r\n        \"age\": 28,\r\n        \"gender\": \"F\",\r\n        \"birthDate\": \"10-05-1996\",\r\n        \"position\": \"Project Manager\",\r\n        \"status\": \"ACTIVE\",\r\n        \"fullName\": \"Jane Doe Johnson\"\r\n    },\r\n    {\r\n        \"id\": 7,\r\n        \"firstName\": \"Jane\",\r\n        \"lastName\": \"Thomson\",\r\n        \"secondLastName\": \"Johnson\",\r\n        \"age\": 28,\r\n        \"gender\": \"F\",\r\n        \"birthDate\": \"10-05-1996\",\r\n        \"position\": \"Project Manager\",\r\n        \"status\": \"ACTIVE\",\r\n        \"fullName\": \"Jane Thomson Johnson\"\r\n    }\r\n]"
+				},
+				{
+					"name": "500:ERROR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"active"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Unknown error :: An unknown or uncontrolled error occurred: ...\",\r\n    \"errorCode\": null\r\n}"
+				}
+			]
+		},
+		{
+			"name": "getAllEmployees",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees"
+					]
+				},
+				"description": "```\nAPI to retrieve the list of all registered employees\n\n ```"
+			},
+			"response": [
+				{
+					"name": "200:OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"id\": 5,\r\n        \"firstName\": \"Geralt\",\r\n        \"lastName\": \"of\",\r\n        \"secondLastName\": \"Rivia\",\r\n        \"age\": 42,\r\n        \"gender\": \"M\",\r\n        \"birthDate\": \"05-05-1983\",\r\n        \"position\": \"The Witcher\",\r\n        \"status\": \"INACTIVE\",\r\n        \"fullName\": \"Geralt of Rivia\"\r\n    },\r\n    {\r\n        \"id\": 6,\r\n        \"firstName\": \"Jane\",\r\n        \"lastName\": \"Doe\",\r\n        \"secondLastName\": \"Johnson\",\r\n        \"age\": 28,\r\n        \"gender\": \"F\",\r\n        \"birthDate\": \"10-05-1996\",\r\n        \"position\": \"Project Manager\",\r\n        \"status\": \"ACTIVE\",\r\n        \"fullName\": \"Jane Doe Johnson\"\r\n    },\r\n    {\r\n        \"id\": 7,\r\n        \"firstName\": \"Jane\",\r\n        \"lastName\": \"Thomson\",\r\n        \"secondLastName\": \"Johnson\",\r\n        \"age\": 28,\r\n        \"gender\": \"F\",\r\n        \"birthDate\": \"10-05-1996\",\r\n        \"position\": \"Project Manager\",\r\n        \"status\": \"ACTIVE\",\r\n        \"fullName\": \"Jane Thomson Johnson\"\r\n    }\r\n]"
+				},
+				{
+					"name": "500:ERROR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Unknown error :: An unknown or uncontrolled error occurred: ...\",\r\n    \"errorCode\": null\r\n}"
+				}
+			]
+		},
+		{
+			"name": "addEmployees",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": 6,\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Thomson\",\r\n    \"secondLastName\": \"Johnson\",\r\n    \"age\": 28,\r\n    \"gender\": \"F\",\r\n    \"birthDate\": \"10-05-1996\",\r\n    \"position\": \"Project Manager\"\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees"
+					]
+				},
+				"description": "```\nAPI to insert one or more employees\n\n ```"
+			},
+			"response": [
+				{
+					"name": "201:CREATED",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"firstName\": \"Jacito\",\r\n    \"lastName\": \"Vel\",\r\n    \"secondLastName\": \"Bus\",\r\n    \"age\": 39,\r\n    \"gender\": \"F\",\r\n    \"birthDate\": \"22-08-1985\",\r\n    \"position\": \"Developer\"\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"id\": 10,\r\n        \"firstName\": \"Jacito\",\r\n        \"lastName\": \"Vel\",\r\n        \"secondLastName\": \"Bus\",\r\n        \"age\": 39,\r\n        \"gender\": \"F\",\r\n        \"birthDate\": \"22-08-1985\",\r\n        \"position\": \"Developer\",\r\n        \"status\": \"ACTIVE\",\r\n        \"fullName\": \"Jacito Vel Bus\"\r\n    }\r\n]"
+				},
+				{
+					"name": "400:BAD_REQUEST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 6,\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Thomson\",\r\n    \"secondLastName\": \"Johnson\",\r\n    \"age\": 28,\r\n    \"gender\": \"F\",\r\n    \"birthDate\": \"10-05-1996\",\r\n    \"position\": \"Project Manager\"\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"The gender 'FF' does not match any of the valid options in the Gender enum: M, F, O\",\r\n    \"errorCode\": null\r\n}"
+				},
+				{
+					"name": "500:ERROR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 6,\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Thomson\",\r\n    \"secondLastName\": \"Johnson\",\r\n    \"age\": 28,\r\n    \"gender\": \"F\",\r\n    \"birthDate\": \"1995-05-05\",\r\n    \"position\": \"Project Manager\"\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Unknown error :: An unknown or uncontrolled error occurred: ...\",\r\n    \"errorCode\": null\r\n}"
+				}
+			]
+		},
+		{
+			"name": "getEmployeeById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"{id}"
+					]
+				},
+				"description": "```\nAPI to retrieve a specific employee by their ID.\n\n ```"
+			},
+			"response": [
+				{
+					"name": "200:OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"{id}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"id\": 5,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"secondLastName\": \"Smith\",\r\n    \"age\": 30,\r\n    \"gender\": \"M\",\r\n    \"birthDate\": \"18-09-1991\",\r\n    \"position\": \"Software Developer\",\r\n    \"status\": \"ACTIVE\",\r\n    \"fullName\": \"John Doe Smith\"\r\n}"
+				},
+				{
+					"name": "404:NOT_FOUND",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"100"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Employee not found\",\r\n    \"errorCode\": null\r\n}"
+				},
+				{
+					"name": "500:ERROR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"5"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Unknown error :: An unknown or uncontrolled error occurred: ...\",\r\n    \"errorCode\": null\r\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteEmployee",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"{id}"
+					]
+				},
+				"description": "```\nAPI to delete an employee by their ID\n\n ```"
+			},
+			"response": [
+				{
+					"name": "200:OK",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"id\": 9,\r\n    \"firstName\": null,\r\n    \"lastName\": null,\r\n    \"secondLastName\": null,\r\n    \"age\": null,\r\n    \"gender\": null,\r\n    \"birthDate\": null,\r\n    \"position\": null,\r\n    \"status\": null,\r\n    \"fullName\": \"Jane Thomson Johnson\"\r\n}"
+				},
+				{
+					"name": "404:NOT_FOUND",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"100"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Employee not found\",\r\n    \"errorCode\": null\r\n}"
+				},
+				{
+					"name": "500:ERROR",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Unknown error :: An unknown or uncontrolled error occurred: ...\",\r\n    \"errorCode\": null\r\n}"
+				}
+			]
+		},
+		{
+			"name": "updateEmployee",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Henry William\",\r\n  \"lastName\": \"Dalgliesh\",\r\n  \"secondLastName\": \"Cavill\",\r\n  \"age\": 42,\r\n  \"gender\": \"Macho\",\r\n  \"birthDate\": \"05-05-1983\",\r\n  \"position\": \"Superman\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employees/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"{id}"
+					]
+				},
+				"description": "```\nAPI to update an employee's data\n\n ```"
+			},
+			"response": [
+				{
+					"name": "200:OK",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Geralt\",\r\n  \"lastName\": \"of\",\r\n  \"secondLastName\": \"Rivia\",\r\n  \"age\": 42,\r\n  \"gender\": \"M\",\r\n  \"birthDate\": \"05-05-1983\",\r\n  \"position\": \"The Witcher\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"{id}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"id\": 5,\r\n    \"firstName\": null,\r\n    \"lastName\": null,\r\n    \"secondLastName\": null,\r\n    \"age\": null,\r\n    \"gender\": null,\r\n    \"birthDate\": null,\r\n    \"position\": null,\r\n    \"status\": null,\r\n    \"fullName\": \"Henry William Dalgliesh Cavill\"\r\n}"
+				},
+				{
+					"name": "404:NOT_FOUND",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Geralt\",\r\n  \"lastName\": \"of\",\r\n  \"secondLastName\": \"Rivia\",\r\n  \"age\": 42,\r\n  \"gender\": \"M\",\r\n  \"birthDate\": \"05-05-1983\",\r\n  \"position\": \"The Witcher\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"{id}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Employee not found\",\r\n    \"errorCode\": null\r\n}"
+				},
+				{
+					"name": "400:BAD_REQUEST",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Geralt\",\r\n  \"lastName\": \"of\",\r\n  \"secondLastName\": \"Rivia\",\r\n  \"age\": 42,\r\n  \"gender\": \"M\",\r\n  \"birthDate\": \"05-05-1983\",\r\n  \"position\": \"The Witcher\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"{id}"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"The gender 'MACHO' does not match any of the valid options in the Gender enum: [Lcom.mx.babel.employee.db.model.enums.Gender;@237f05bf\",\r\n    \"errorCode\": null\r\n}"
+				},
+				{
+					"name": "500:ERROR",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Geralt\",\r\n  \"lastName\": \"of\",\r\n  \"secondLastName\": \"Rivia\",\r\n  \"age\": 42,\r\n  \"gender\": \"M\",\r\n  \"birthDate\": \"05-05-1983\",\r\n  \"position\": \"The Witcher\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employees/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"{id}"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"errorMessage\": \"Unknown error :: An unknown or uncontrolled error occurred: ...\",\r\n    \"errorCode\": null\r\n}"
+				}
+			]
+		}
+	]
+}
